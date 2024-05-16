@@ -1,5 +1,3 @@
-
-// BirthdayServer.java
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
@@ -29,6 +27,7 @@ public class BirthdayServer {
                         String receivedGift = gift.getGift();
                         System.out.println("受信したメッセージ: " + receivedMessage);
                         System.out.println("受信したプレゼント: " + receivedGift);
+
                         BirthdayGift response = new BirthdayGift();
                         response.setMessage("サーバーからの返答: ありがとう！\n" + receivedGift + "を受け取りました。");
                         response.setGift("🎉 " + receivedGift + " 🎉");
